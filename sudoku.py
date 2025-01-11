@@ -7,8 +7,21 @@ def is_valid(board, row, col, num):
     for i in range(9):
         if board[i][col] == num:  
             return False
- 
-    start_row, start_col = 3 * (row // 3), 3 * (col // 3)
+         
+    if row <= 2 :
+        start_row = 0
+    elif 2 < row <=5 :
+        start_row = 3
+    else :
+        start_row = 6
+
+    if col <= 2 :
+        start_col = 0
+    elif 2 < col <=5 :
+        start_col = 3
+    else :
+        start_col = 6
+
     for i in range(3):
         for j in range(3):
             if board[start_row + i][start_col + j] == num:
