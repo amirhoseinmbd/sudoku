@@ -51,5 +51,7 @@ board = [
 
 if amir_solve(board):
     print_board(board)
+    print('Done!')
 else:
-    print('ey vayyyy')
+    print('There is no solution!')
+
